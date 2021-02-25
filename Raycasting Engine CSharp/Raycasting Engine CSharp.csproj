@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8294F02-8993-4F77-AAB6-04C3D8AEA920}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Raycasting_Engine_CSharp</RootNamespace>
+    <AssemblyName>Raycasting Engine CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation.cs" />
+    <Compile Include="Board.cs" />
+    <Compile Include="ColorUtilities.cs" />
+    <Compile Include="CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomPictureBox.Designer.cs">
+      <DependentUpon>CustomPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrawingUtilities.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="FontSheet.cs" />
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathUtilities.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ray.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="Weapon.cs" />
+    <EmbeddedResource Include="CustomPictureBox.resx">
+      <DependentUpon>CustomPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\MT0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\MT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\MT2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Freaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\MetalBarrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\WoodenBarrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Bars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Ice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Gate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\CeilingLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\GateLocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\ItemPickup.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\DoorOpen.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\PushWallStart.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\PushWallStop.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Pistol.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Key.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\RightHandPunch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\LeftHandPunch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\LeftHandFist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\RightHandFist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Punch.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\RedBrickWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\RedBrickWallVariant1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\RedBrickWallVariant2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\BlueBrickWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\WoodenPlanks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\StoneWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\GreyBrickWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Basketball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPBarBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPBarPurple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPBarPurpleEnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPBarRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPBarRedEnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPBarLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPBarRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmmoBarLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmmoBarBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmmoBarEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmmoBarFull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmmoBarRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FreakerCorpse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Poof.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlyingEnemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BloodTexture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paused.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FreakerDamageMap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlyingEnemyDamageMap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreDisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreComboBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreCombo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreComma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreCommaBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HapticFontSheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeapotFontSheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomPresets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\AmmoBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\HealthPack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WoodenBarrelBroken.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
