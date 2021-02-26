@@ -9,13 +9,8 @@ The map is littered with monsters for the player to fight off with their fists a
 Despite only supporting horizontal turning of the camera, an on-screen crosshair allows the player to aim vertically and hit higher damage for landing headshots.
 The game assigns points for fighting and applies a multiplier for combos if you can land lots of hits in a short amount of time.
 
-![Alt text](screenshots/raycaster_1.gif?raw=true "Title")
-![Alt text](screenshots/raycaster_2.gif?raw=true "Title")
-![Alt text](screenshots/raycaster_3.gif?raw=true "Title")
-![Alt text](screenshots/raycaster_4.gif?raw=true "Title")
-![Alt text](screenshots/raycaster_5.gif?raw=true "Title")
-![](https://imgur.com/czoKgFJ)
-![](https://imgur.com/oeJfwMM)
-![](https://imgur.com/y6RED11)
-![](https://imgur.com/KhvXxLK)
-![](https://imgur.com/vlWbPrR)
+![Screenshot](screenshots/raycaster_1.gif?raw=true "Title")
+![Screenshot](screenshots/raycaster_2.gif?raw=true "Title")
+![Screenshot](screenshots/raycaster_3.gif?raw=true "Title")
+![Screenshot](screenshots/raycaster_4.gif?raw=true "Title")
+![Screenshot](screenshots/raycaster_5.gif?raw=true "Title")
